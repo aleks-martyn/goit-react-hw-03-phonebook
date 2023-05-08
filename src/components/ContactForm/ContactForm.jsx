@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import shortid from 'shortid';
 import { Formik, ErrorMessage } from 'formik';
 import * as yup from 'yup';
-import { FormStyle, FormLabel, Input } from './ContactForm.styled';
+import { StyledForm, FormLabel, Input } from './ContactForm.styled';
 
 const schema = yup.object().shape({
   name: yup.string().required(),
@@ -29,7 +29,7 @@ export const ContactForm = props => {
       validationSchema={schema}
       onSubmit={handleSubmit}
     >
-      <FormStyle>
+      <StyledForm>
         <FormLabel htmlFor={nameInputId}>
           <span>Name</span>
         </FormLabel>
@@ -43,7 +43,7 @@ export const ContactForm = props => {
         <ErrorMessage name="number" component="div" />
 
         <button type="submit">Add contact</button>
-      </FormStyle>
+      </StyledForm>
     </Formik>
   );
 };
