@@ -14,10 +14,9 @@ const initialValues = {
   number: '',
 };
 
-export const ContactForm = () => {
-  const handleSubmit = ( values, { resetForm }) => {
-    console.log(values);
-    
+export const ContactForm = props => {
+  const handleSubmit = (values, { resetForm }) => {
+    props.onSubmit(values);
     resetForm();
   };
 
