@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { Form, Field } from 'formik';
 
-export const FormStyle = styled(Form)`
+export const StyledForm = styled(Form)`
   display: inline-flex;
   flex-direction: column;
   padding: 20px;
